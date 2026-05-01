@@ -1,6 +1,5 @@
 name: buildingblocks
-on: push,
-     workflow_dispatch
+on: push
 jobs:
   echo-hello:
     runs-on: ubuntu-latest
