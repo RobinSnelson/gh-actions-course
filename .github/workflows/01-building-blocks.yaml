@@ -1,13 +1,16 @@
-name: buildingblocks
-on:
-  workflow_dispatch:
+name: 01 - Building Blocks
+
+on: push
     
 jobs:
   echo-hello:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello, World!"
+      - name: Say Hello
+        run: echo "Hello, World!"
   say-goodbye:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Goodbye!"
+      - name: Say Goodbye
+        run: echo "Goodbye!"
+    
