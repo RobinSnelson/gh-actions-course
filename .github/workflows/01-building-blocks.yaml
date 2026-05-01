@@ -1,0 +1,12 @@
+name: buildingblocks
+on: push,
+     workflow_dispatch
+jobs:
+  echo-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello, World!"
+  say-goodbye:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Goodbye!"
