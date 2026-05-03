@@ -1,1 +1,3 @@
-Repository containing all notes and code for the course
+** Read me for the course I am doing
+
+*** Filters and Events
