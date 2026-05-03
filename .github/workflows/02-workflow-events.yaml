@@ -1,4 +1,4 @@
-name: 02 -Work Flow Events
+name: 02 - Work Flow Events
 on: push
 
 jobs:
@@ -6,4 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Show the Trigger
-      
+        run: echo "event name is:" ${{ github.event_name }} 
+
+
