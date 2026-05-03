@@ -1,5 +1,5 @@
 name: 04 - Using Actions
-on: push
+on: workflow_dispatch
 
 jobs:
     build:
@@ -14,7 +14,6 @@ jobs:
             - name: Install Dependencies
               run: |
                 cd 04-using-actions/react-app
-                ls -l
                 npm ci
                 
             
