@@ -1,3 +1,6 @@
-** Read me for the course I am doing
+ ## Read me for the course I am doing
 
-*** Filters and Events
+## Filters and Events
+
+## Functions
+
