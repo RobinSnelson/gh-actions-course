@@ -26,6 +26,8 @@ jobs:
             - name: fail if experimental
               if: matrix.tag == 'experimental'
               run: exit 1
+            - name: sleep
+              run: sleep 10
             - name: Upload Test Results
               run: |
                echo "Uploading test results"
