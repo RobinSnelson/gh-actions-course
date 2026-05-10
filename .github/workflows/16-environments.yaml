@@ -27,7 +27,7 @@ jobs:
         steps:
             - name: "Echo Vars"
               run:
-                echo "Deploying to prod"
+                echo "Deploying to ${{ env.my-env-value }}"
 
         
 
