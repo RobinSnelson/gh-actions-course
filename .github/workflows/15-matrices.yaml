@@ -18,6 +18,7 @@ jobs:
                     - os: ubuntu-latest
                       node-version: 21.x
                       tag: "experimental"
+                   
         runs-on: ${{ matrix.os }}
         steps:
             - name: setup Node
@@ -26,7 +27,7 @@ jobs:
                 node: ${{ matrix.node-version }}
             - name: fail if experimental
               if: matrix.tag == 'experimental'
-              run: exit 1
+              run: exit 0
             - name: sleep
               run: sleep 10
             - name: Upload Test Results
@@ -37,6 +38,7 @@ jobs:
         runs-on: ubuntu-latest
         strategy:
           matrix:
+
             color:
                 - red
                 - green
@@ -47,11 +49,12 @@ jobs:
                 - small
                 - large
             include:
+              - opacity: 50
               - color: red
                 shape: triangle
         steps:
             - name: Dummy Step
-              run: echo "${{ matrix.color }}-${{ matrix.shape }}-${{ matrix.size}}"  
+              run: echo "${{ matrix.color }}-${{ matrix.shape }}-${{ matrix.size}}-${{ matrix.opacity }}"  
 
 
 
