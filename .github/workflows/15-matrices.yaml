@@ -60,7 +60,6 @@ jobs:
                 shape: circle
                 size: medium
             exclude:
-              - opacity: 75
               - color: green
               - shape: circle
               
