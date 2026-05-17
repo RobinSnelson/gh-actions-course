@@ -5,17 +5,19 @@ on:
         inputs:
             base-branch:
                 type: string
+                default: 'main'
             target-branch:
                 type: string
             working-dir:
                 type: string
+                default: '17-custom-actions/react-app'
             debug:
                 type: boolean
 
 permissions:
     contents: write
     pull-requests: write
-    
+
 jobs:
     dependency-update:
         runs-on: ubuntu-latest
