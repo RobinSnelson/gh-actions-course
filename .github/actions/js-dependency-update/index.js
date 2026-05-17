@@ -79,14 +79,14 @@ async function run() {
       await octokit.rest.pulls.create({
         owner: github.context.repo.owner,
         repo: github.context.repo.repo,
-        title: "Updte NPM dependencies",
-        body: "this pull request updates NPM dependencies",
+        title: `Update NPM dependencies`,
+        body: `This pull request updates NPM packages`,
         base: baseBranch,
         head: targetBranch,
       });
     } catch (e) {
       core.error(
-        "[js-dependency-update] : Something went wrong while creating thePR. Check logs below",
+        "[js-dependency-update] : Something went wrong while creating the PR. Check logs below.",
       );
       core.setFailed(e.message);
       core.error(e);
