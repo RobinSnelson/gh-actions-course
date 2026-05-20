@@ -3,8 +3,20 @@ on:
     workflow_dispatch: 
         inputs:
             url:
-                type: string
-                default: 'https://www.google.com'
+                type: choice
+                options:
+                    - 'https://bbc.co.uk'
+                    - 'https://www.google.com'
+                    - 'https://me.me'
+            max_trials:
+                description: 'Maximum trials until action fails'
+                default: '10'
+                required: false
+            delay:
+                description: 'Delay in seconds between trials'
+                default: '5'
+                required: false
+
 
 jobs:
     ping_url:
@@ -14,4 +26,3 @@ jobs:
               uses: actions/Checkout@v4
             - name: Ping url
               uses: ./.github/actions/docker-ping-url
-              
