@@ -6,8 +6,8 @@ on:
                 type: choice
                 options:
                     - 'https://bbc.co.uk'
-                    - 'https://www.google.com'
-                    - 'https://me.me'
+                    - 'https://www.googlereerververv.com'
+                    - 'me.me'
             max_trials:
                 description: 'Maximum trials until action fails'
                 default: '10'
@@ -26,3 +26,9 @@ jobs:
               uses: actions/Checkout@v4
             - name: Ping url
               uses: ./.github/actions/docker-ping-url
+              with:
+                url: ${{ inputs.url }}
+                max_trials: ${{ inputs.max_trials}}
+                delay: ${{ inputs.delay }}
+                  
+
