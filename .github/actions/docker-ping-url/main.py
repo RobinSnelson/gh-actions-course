@@ -8,14 +8,17 @@ def ping_url(url, delay, max_trials):
     while trials < max_trials:
         try:
             response = requests.get(url)
+
             if response.status_code == 200:
                 print(f"Website {url} is reachable.")
                 return True
-        except: requests.ConnectionError
-            print(f"Website {url} is unreachable. REtrying in {delay} seconds...")
+            
+        except requests.ConnectionError:
+            print(f"Website {url} is unreachable. Retrying in {delay} seconds...")
             time.sleep(delay)
             trials += 1
-        except: requests.exceptions.MissingSchema:
+        
+        except requests.exceptions.MissingSchema:
             print(f"Invalid URL Format: {url} please provide a url with a valid schema")
             return False
         
