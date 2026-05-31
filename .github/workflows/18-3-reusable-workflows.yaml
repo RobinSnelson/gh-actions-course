@@ -10,6 +10,6 @@ jobs:
     
     e2etests:
         needs: deploy
-        uses: RobinSnelson/github-actions-course-example-e2e/.github/workflows/e2e.yaml@main
+        uses: robinsnelson/github-actions-course-example-e2e/.github/workflows/e2e.yaml@main
         secrets:
             access-token: ${{ secrets.GH_TOKEN }}
